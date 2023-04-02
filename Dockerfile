@@ -1,9 +1,6 @@
 # Utilizando a imagem oficial de Node.js como a imagem base 
 FROM node:14-alpine
 
-#Instalando git
-RUN apk add --no-cache git
-
 #Copiando os arquivos do projeto e suas dependências
 COPY . .
 
