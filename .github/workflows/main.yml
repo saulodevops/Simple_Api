@@ -32,13 +32,13 @@ jobs:
       with:
         context: .
         push: true
-        tags: my-image:${{ github.sha }}
+        tags: kxc-api:${{ github.sha }}
 
     - name: Deploy to Amazon ECS
       uses: aws-actions/amazon-ecs-deploy@v1
       with:
-        cluster: my-cluster
-        service: my-service
-        task-definition: my-task-definition
-        container-name: my-container
+        cluster: cluster-api-kxc
+        service: kxc-api-service
+        task-definition: service
+        container-name: kxc-api
         image: ${{ steps.build-image.outputs.digest }}
