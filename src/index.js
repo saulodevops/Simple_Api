@@ -16,7 +16,7 @@ const express = require('express');
     })
 
     app.get('/', async (req, res) => {
-        const response = { 'message': "API OK!", 'request_id': i }
+        const response = { 'message': "API OK!_v2", 'request_id': i }
         console.log(response)
         res.send(response)
     })
@@ -37,7 +37,7 @@ const express = require('express');
 
             await client.end()
 
-            const response = { 'message': "Conectado ao banco", 'version': version, 'request_id': i }
+            const response = { 'message': "Conectado ao banco_v2", 'version': version, 'request_id': i }
             console.log(response)
             res.send(response)
         } catch (e) {
